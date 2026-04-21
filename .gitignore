@@ -1,0 +1,7 @@
+# Eclipse metadata
+.project
+.classpath
+.settings/
+
+# Build output
+bin/
