@@ -1,10 +1,10 @@
 # j-appointment-service
 
-Appointment Service Application
+# Appointment Service Application
 
 A robust Java-based application designed to manage appointments with strict validation rules for IDs, dates, and descriptions, accompanied by a comprehensive JUnit 5 test suite.
 
-Project Overview
+## Project Overview
 
 The project consists of two primary domain classes and their corresponding test suites:
 
@@ -14,25 +14,25 @@ AppointmentsService: Manages a collection of appointments (AppointmentList), all
 
 Class Specifications & Rules
 
-Appointment Class (package appointments;)
+### **Appointment Class (package appointments;)**
 
-Appointment ID: Automatically generated as a 10-digit random string, padded with leading zeros if necessary, and cannot be modified once set.
+appointID: Automatically generated as a 10-digit random string, padded with leading zeros if necessary, and cannot be modified once set.
 
-Appointment Date: Must be provided in MM-dd-yyyy format, cannot be null, and cannot be set in the past relative to the current system date.
+appointDate: Must be provided in MM-dd-yyyy format, cannot be null, and cannot be set in the past relative to the current system date.
 
 Description: Must not be null or blank, and cannot exceed 50 characters in length.
 
-AppointmentsService Class (package appointments;)
+### **AppointmentsService Class (package appointments;)**
 
-appointmentList: An ArrayList<Appointment> storing all active appointments.
+appointList: An ArrayList<Appointment> storing all active appointments.
 
 addAppointment(String potentialDate, String AppointDescription): Creates a new validated Appointment instance and adds it to the list.
 
-deleteAppointment(String AppointID): Searches for an appointment by its unique ID and removes it from the list, or prints a message if the ID is not found.
+deleteAppointment(String appointID): Searches for an appointment by its unique ID and removes it from the list, or prints a message if the ID is not found.
 
 showAppointmentList(): Iterates through the list and prints out the ID, date, and description for each appointment.
 
-Test Suite (package tests;)
+### **Test Suite (package tests;)**
 
 The testing package utilizes JUnit 5 to validate all business rules, constructors, exceptions, getters/setters, and service interactions:
 
@@ -40,9 +40,9 @@ AppointmentTest: Tests successful appointment creation, null/blank argument exce
 
 AppointmentsServiceTest: Verifies adding appointments to the list, verifying unique ID generation, deleting appointments by ID, and handling missing IDs.
 
-Getting Started & Running Tests
+## Getting Started & Running Tests
 
-Prerequisites
+### **Prerequisites**
 
 Java Development Kit (JDK) 11 or higher
 
