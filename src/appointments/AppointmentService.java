@@ -5,38 +5,43 @@ import java.util.ArrayList;
 
 public class AppointmentService
 {
-	public ArrayList<Appointment> AppointList = new ArrayList<Appointment>();
+	private ArrayList<Appointment> appointList = new ArrayList<Appointment>();
 	
+	public int getAppointListSize() {
+		return appointList.size();
+	}
+
+	//Method to display all appointments in the list
 	public void showAppointList()
 	{
-		for (int i = 0; i < AppointList.size(); i++)
+		for (int i = 0; i < appointList.size(); i++)
 		{
-			System.out.println("\t Appointment ID: " + AppointList.get(i).getAppointID());
-			System.out.println("\t Appointment Date: " + AppointList.get(i).getAppointDate());
-			System.out.println("\t Appointment Description: " + AppointList.get(i).getAppointDescription());
+			System.out.println("\t Appointment ID: " + appointList.get(i).getAppointID());
+			System.out.println("\t Appointment Date: " + appointList.get(i).getAppointDate());
+			System.out.println("\t Appointment Description: " + appointList.get(i).getAppointDescription());
 		}
 	}
 	
 	//Date is in MM-dd-yyyy format
-	public void addAppointment(String potentialDate, String AppointDescription)
+	public void addAppointment(String potentialDate, String appointDescription)
 	{
-		Appointment newAppoint = new Appointment(potentialDate, AppointDescription);
-		AppointList.add(newAppoint);
+		Appointment newAppoint = new Appointment(potentialDate, appointDescription);
+		appointList.add(newAppoint);
 	}
 	
 	public void deleteAppointment(String AppointID) 
 	{
-		boolean AppointFound = false;
-		for (int i = 0; i < AppointList.size(); i++) 
+		boolean appointFound = false;
+		for (int i = 0; i < appointList.size(); i++) 
 		{
-			if(AppointList.get(i).getAppointID().equals(AppointID)) 
+			if(appointList.get(i).getAppointID().equals(AppointID)) 
 			{
-				AppointFound = true;
-				AppointList.remove(i);
+				appointFound = true;
+				appointList.remove(i);
 				break;
 			} 
 		}
-		if(!AppointFound) 
+		if(!appointFound) 
 		{
 			System.out.println("Appointment ID was not found. Appointment ID: " + AppointID); //printout if AppointID was not found.
 		}
