@@ -7,7 +7,8 @@ public class AppointmentService
 {
 	private ArrayList<Appointment> appointList = new ArrayList<Appointment>();
 	
-	public int getAppointListSize() {
+	public int getAppointListSize() 
+	{
 		return appointList.size();
 	}
 
