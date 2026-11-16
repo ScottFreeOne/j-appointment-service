@@ -12,7 +12,7 @@ Appointment: Represents an individual appointment containing a unique 10-digit I
 
 AppointmentsService: Manages a collection of appointments (AppointmentList), allowing users to add new appointments, delete appointments by ID, and display appointment details.
 
-Class Specifications & Rules
+## Class Specifications & Rules
 
 ### **Appointment Class (package appointments;)**
 
