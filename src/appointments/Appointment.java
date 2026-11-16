@@ -12,7 +12,7 @@ public class Appointment
 	private Date appointDate;
 	private String appointDescript;
 	
-	public Appointment(String potentialDate, String descript) // 
+	public Appointment(String potentialDate, String descript)
 	{
 		Date dateHolder = null;
 		
