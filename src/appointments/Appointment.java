@@ -115,11 +115,12 @@ public class Appointment
 			throw new IllegalArgumentException("The date was not converted correctly, please check input date format.");
 		}
  	}
+
 	//generates random 9 digit ID and pads the beginning with a 0 to ensure 10 digits.
 	 private String genAppointID() 
 	    {
-	    	Random RanID = new Random(); //generate random number
-	    	long inRangeID = Math.abs(RanID.nextLong() % 1_000_000_000); // Ensure the value is non-negative and within range
+	    	Random ranID = new Random(); //generate random number
+	    	long inRangeID = Math.abs(ranID.nextLong() % 1_000_000_000); // Ensure the value is non-negative and within range
 	        String reRanID = String.format("%010d", inRangeID);// formatting number, limiting total digit count
 	        return reRanID;
 	    }

@@ -15,7 +15,7 @@ class AppointmentServiceTest {
 		
 		bookingService.addAppointment("10-11-2030", "This is a valid test case");	
 		
-		assertEquals(1, bookingService.AppointList.size(), "Appointment not saved."); // confirms the addition of Appointment
+		assertEquals(1, bookingService.getAppointListSize(), "Appointment not saved."); // confirms the addition of Appointment
 		bookingService.showAppointList(); // confirms everything saved, as well as uniqueness of ID.	
 	}
 
@@ -28,14 +28,14 @@ class AppointmentServiceTest {
 		
 		bookingService.addAppointment("10-11-2030", "This is a valid test case");	
 		
-		for (appointments.Appointment Appointment : bookingService.AppointList)
+		for (appointments.Appointment Appointment : bookingService.appointList)
 		{
 			AID = Appointment.getAppointID();
 		}
 		
 		
 		bookingService.deleteAppointment(AID);
-		bookingService.showAppointList();
+		assertEquals(0, bookingService.getAppointListSize(), "Appointment not deleted."); // confirms the deletion of Appointment
 		
 			
 	}
