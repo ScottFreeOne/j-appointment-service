@@ -12,7 +12,7 @@ public class Appointment
 	private Date appointDate;
 	private String appointDescript;
 	
-	public Appointment(String potentialDate, String Descript) // 
+	public Appointment(String potentialDate, String descript) // 
 	{
 		Date dateHolder = null;
 		
@@ -33,11 +33,11 @@ public class Appointment
 		
         this.appointDate = dateHolder;
         
-        if (Descript == null || Descript.length() > 50 || Descript.isBlank()) 
+        if (descript == null || descript.length() > 50 || descript.isBlank()) 
 		{
 			throw new IllegalArgumentException("Invalid Description."); // error msg if description isn't valid.
 		}
-		this.appointDescript = Descript;
+		this.appointDescript = descript;
         
         
     }
@@ -74,13 +74,13 @@ public class Appointment
         this.appointDate = newDate;
 	}
  
- 	public void setAppointDescript(String Descript) 
+ 	public void setAppointDescript(String descript) 
   	{
-		if (Descript == null || Descript.length() > 50 || Descript.isBlank()) 
+		if (descript == null || descript.length() > 50 || descript.isBlank()) 
 		{
 			throw new IllegalArgumentException("Invalid Appointment description."); // error msg if description too long or not present/empty
 		}
-		this.appointDescript = Descript;
+		this.appointDescript = descript;
 	}
 	
  	

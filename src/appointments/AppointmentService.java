@@ -29,12 +29,12 @@ public class AppointmentService
 		appointList.add(newAppoint);
 	}
 	
-	public void deleteAppointment(String AppointID) 
+	public void deleteAppointment(String appointID) 
 	{
 		boolean appointFound = false;
 		for (int i = 0; i < appointList.size(); i++) 
 		{
-			if(appointList.get(i).getAppointID().equals(AppointID)) 
+			if(appointList.get(i).getAppointID().equals(appointID)) 
 			{
 				appointFound = true;
 				appointList.remove(i);
@@ -43,7 +43,7 @@ public class AppointmentService
 		}
 		if(!appointFound) 
 		{
-			System.out.println("Appointment ID was not found. Appointment ID: " + AppointID); //printout if AppointID was not found.
+			System.out.println("Appointment ID was not found. Appointment ID: " + appointID); //printout if appointID was not found.
 		}
 	}
 
